@@ -1,0 +1,48 @@
+:root{--bg:#0d1117;--panel:#161d27;--panel2:#1d2634;--ink:#eef3f8;--muted:#a9b6c6;--line:#2c3a4d;--pink:#ff5d8f;--teal:#2dd4bf;--gold:#f5c542;--silver:#c7d0da;--bronze:#d08a4e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.hero{padding:28px 20px 18px;background:linear-gradient(135deg,#3b1040,#0d2b3d 60%,#0d1117);border-bottom:3px solid var(--pink)}
+.hero h1{margin:4px 0;font-size:34px;letter-spacing:.5px}
+.eyebrow{margin:0;color:var(--teal);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+.sub{max-width:760px;color:#d7e2ee}
+.counts{color:var(--muted);font-size:13px}
+.stats{font-size:20px;font-weight:700}
+.bar{height:10px;background:#0a0e13;border-radius:6px;overflow:hidden;max-width:640px}
+#barfill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--pink));transition:width .3s}
+.tabs{display:flex;gap:8px;padding:12px 20px 0}
+.tabs button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px 8px 0 0;padding:10px 16px;cursor:pointer;font-size:15px}
+.tabs button.active{background:var(--panel2);border-bottom-color:var(--pink);color:#fff}
+main{padding:18px 20px 30px;max-width:1100px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:14px}
+.controls input[type=search]{padding:8px;border-radius:6px;border:1px solid var(--line);background:#0a0e13;color:var(--ink);min-width:220px}
+.controls select{padding:8px;border-radius:6px;border:1px solid var(--line);background:#0a0e13;color:var(--ink)}
+.controls button,.import{background:var(--teal);color:#06231f;border:0;border-radius:6px;padding:8px 12px;font-weight:700;cursor:pointer}
+.import input{display:none}
+#reset{background:#334155;color:#fff}
+.check{font-size:14px}
+.trophies{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.trophy{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.trophy.earned{border-color:var(--teal)}
+.trophy h3{margin:0 0 4px;font-size:18px}
+.trophy .desc{margin:0 0 8px;color:#d7e2ee}
+.trophy .guide{margin:8px 0}
+.trophy .sources{margin:6px 0 0;color:var(--muted);font-size:13px}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:20px;padding:2px 9px;margin-right:6px;text-transform:capitalize}
+.tag.platinum{background:var(--gold);color:#231a00}.tag.gold{background:var(--gold);color:#231a00}
+.tag.silver{background:var(--silver);color:#1a222c}.tag.bronze{background:var(--bronze);color:#241505}
+.tag.missable{background:#7c2d12;color:#ffe4d6}.tag.hidden{background:#312e81;color:#e0e7ff}
+.tag.kind{background:#0f766e;color:#d1fae5}
+.earn{display:flex;gap:10px;align-items:flex-start}
+.earn input{width:22px;height:22px;margin-top:2px;accent-color:var(--teal)}
+.earn>div{flex:1}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--teal);font-weight:700}
+.steps{margin:8px 0 0;padding-left:20px}
+.empty{color:var(--muted)}
+.roadmap{list-style:none;padding:0;display:grid;gap:10px}
+.roadmap li{background:var(--panel);border-left:4px solid var(--pink);border-radius:8px;padding:12px 14px}
+.roadmap li b{display:block;font-size:17px}
+.missables li{margin-bottom:6px}
+footer{padding:16px 20px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (max-width:640px){.hero h1{font-size:26px}.controls input[type=search]{min-width:0;flex:1}}
